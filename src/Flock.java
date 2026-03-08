@@ -5,7 +5,7 @@ import java.util.List;
 public class Flock implements Quackable {
     List<Quackable> quackers = new ArrayList<>();
 
-    // Add a duck (or another flock!) to this flock
+    // Add a duck (or another flock) to this flock
     public void add(Quackable quacker) {
         quackers.add(quacker);
     }

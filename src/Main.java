@@ -6,19 +6,19 @@ public class Main {
         simulate(duckFactory);
     }
 
-    // ── STEP 1 + 4: Create individual ducks via factory
+    // STEP 1 + 4: Create individual ducks via factory
     static void simulate(AbstractDuckFactory duckFactory) {
         Quackable mallardDuck   = duckFactory.createMallardDuck();
         Quackable redheadDuck   = duckFactory.createRedheadDuck();
         Quackable duckCall      = duckFactory.createDuckCall();
         Quackable rubberDuck    = duckFactory.createRubberDuck();
 
-        // ── STEP 2: Goose adapted to Quackable
+        // STEP 2: Goose adapted to Quackable
         Quackable gooseDuck     = duckFactory.createGooseDuck();
 
         System.out.println("\n===== Duck Simulator: With Observer =====\n");
 
-        // ── STEP 5: Build flocks using Composite pattern
+        // STEP 5: Build flocks using Composite pattern
         Flock flockOfDucks = new Flock();
         flockOfDucks.add(redheadDuck);
         flockOfDucks.add(duckCall);
@@ -54,7 +54,7 @@ public class Main {
         System.out.println("\n===== Quack Count =====");
         System.out.println("The ducks quacked " + QuackCounter.getQuacks() + " times.");
 
-        // ── STEP 6: Track a single duck individually 
+        // ── STEP 6: Track a single duck individually
         System.out.println("\n===== Tracking individual duck =====");
         Quackologist individualWatcher = new Quackologist();
         mallardDuck.registerObserver(individualWatcher);
